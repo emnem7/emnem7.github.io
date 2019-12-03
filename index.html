@@ -6,12 +6,21 @@
     <a-scene embedded arjs>
 	<a-assets>
 		<a-asset-item id="Fawn" src="/models/Mesh_Fawn.gltf"></a-asset-item>
+		<a-asset-item id="tree-obj" src="/models/SALMON.obj"></a-asset-item>
+		<a-asset-item id="tree-mtl" src="/models/SALMON.mtl"></a-asset-item>
 	</a-assets>	
   	<a-marker preset="kanji">
             <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
-				position="0 0.5 0" scale="0.015 0.015 0.015" gltf-model="#Fawn"></a-entity>
+				scale="0.015 0.015 0.015" gltf-model="#Fawn"></a-entity>
 			<a-entity position="0.9 1 0" scale="2 2 2" text="value: Deer;"></a-entity>
   	</a-marker>
+	
+	<a-marker preset="hiro">
+            <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+				position="0 0.5 0" scale="0.015 0.015 0.015" obj-model="obj: #SALMON; mtl: #SALMON"></a-entity>
+			<a-entity position="0.9 1 0" scale="2 2 2" text="value: Salmon;"></a-entity>
+  	</a-marker>
+	
   	<a-entity camera></a-entity>
     </a-scene>
   </body>
