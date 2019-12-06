@@ -8,17 +8,15 @@
 	<a-assets>
 		<a-asset-item id="Fawn" src="/models/Mesh_Fawn.gltf"></a-asset-item>
 		<a-asset-item id="Goose" src="/models/Mesh_Goose.gltf"></a-asset-item>
-		<a-asset-item id="canadagoose-obj" src="/models/canadagoose.obj"></a-asset-item>
-		<a-asset-item id="canadagoose-mtl" src="/models/canadagoose.mtl"></a-asset-item>
 	</a-assets>
 	
-	<a-marker preset="kanji">
+	<a-marker preset="hiro">
 		<a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" scale="0.015 0.015 0.015" gltf-model="#Fawn"></a-entity>
 		<a-entity position="0.9 1 0" scale="2 2 2" text="value: Deer;"> </a-entity>
 	</a-marker>
 	
-	<a-marker preset="hiro">
-		<a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" scale="0.015 0.015 0.015" obj-model="obj: #canadagoose-obj; mtl: #canadagoose-mtl"></a-entity>
+	<a-marker preset="kanji">
+		<a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" scale="0.015 0.015 0.015" gltf-model="#Goose"></a-entity>
 		<a-entity position="0.9 1 0" scale="2 2 2" text="value: Goose;"> </a-entity>
 	</a-marker>
 	
