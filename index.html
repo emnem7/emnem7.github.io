@@ -8,7 +8,7 @@
 		<a-asset-item id="Fawn" src="/models/Mesh_Fawn.gltf"></a-asset-item>
 	</a-assets>
   	<a-marker preset="hiro">
-        <a-gltf-model src="#Fawn" scale="0.15 0.15 0.15"></a-gltf-model>
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" scale="0.015 0.015 0.015" gltf-model="#Fawn"></a-entity>
   	</a-marker>
   	<a-entity camera></a-entity>
     </a-scene>
