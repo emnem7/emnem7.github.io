@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <!-- Aframe library -->
-    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-    
-    <!--AR.js library -->
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
-   
-  <body>
-    <!-- AR.js-specific a-scene with webcam -->
-    <a-scene embedded arjs>
-      
-      <!-- Load custom assets -->
-      <a-assets>
-        <a-asset-item id="Fawn" src="/models/scene.gltf"></a-asset-item>
-      </a-assets>
-      
-      <!-- Custom marker, custom asset -->
-	<a-marker preset='hiro'>
-		<a-sphere color="yellow" radius="5"></a-sphere>
-	</a-marker>
-	<a-entity camera></a-entity>
-    </a-scene>
-  </body>
-</html>
+<!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js -->
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.5/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam;'>
+		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
